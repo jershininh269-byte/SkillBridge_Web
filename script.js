@@ -41,18 +41,43 @@ function showRegister() {
 }
 function showDashboard() {
     document.body.innerHTML = `
-        <h1>Welcome to Skill Bridge</h1>
-        <h2>Student Dashboard</h2>
+        <div class="dashboard-container">
+            <h1>🎓 Skill Bridge</h1>
+            <h2>Student Dashboard</h2>
+            <p>Explore your skills and build your future!</p>
 
-        <button onclick="showSkillAnalyzer()">Skill Gap Analyzer</button>
-        <br><br>
+            <div class="dashboard-grid">
 
-        <button onclick="showRoadmap()">Learning Roadmap</button>
+                <button class="dashboard-card"
+                    onclick="showSkillAnalyzer()">
+                    <span class="card-icon">🎯</span>
+                    <strong>Skill Gap Analyzer</strong>
+                    <small>Discover the skills you need to improve</small>
+                </button>
 
-        <button onclick="showProjects()">Find Projects</button>
-        <br><br>
+                <button class="dashboard-card"
+                    onclick="showRoadmap()">
+                    <span class="card-icon">🗺️</span>
+                    <strong>Learning Roadmap</strong>
+                    <small>Follow a structured learning plan</small>
+                </button>
 
-        <button onclick="showInternships()">Find Internships</button>
+                <button class="dashboard-card"
+                    onclick="showProjects()">
+                    <span class="card-icon">💻</span>
+                    <strong>Find Projects</strong>
+                    <small>Explore projects for your skill level</small>
+                </button>
+
+                <button class="dashboard-card"
+                    onclick="showInternships()">
+                    <span class="card-icon">💼</span>
+                    <strong>Find Internships</strong>
+                    <small>Explore career opportunities</small>
+                </button>
+
+            </div>
+        </div>
     `;
 }
 function showSkillAnalyzer() {
